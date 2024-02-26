@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MyButtonService } from 'my-library';
+// import { MyButtonService } from 'my-library';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +11,10 @@ export class AppComponent {
 
   listOfData: any;
 
-  constructor(private myButtonService: MyButtonService) {}
+  // constructor(private myButtonService: MyButtonService) {}
 
-  useDependencieComponent() {
-    this.listOfData = this.myButtonService.doSomething();
-  }
+  // useDependencieComponent() {
+  //   this.listOfData = this.myButtonService.doSomething();
+  // }
 
 }
