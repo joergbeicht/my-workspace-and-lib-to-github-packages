@@ -16,11 +16,13 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
       - name: Install dependencies
-        run: npm ci
+        run: npm install
+      - name: change to lib
+        run: cd projects/my-library
       - name: Build Lib
-        run: npm run build_lib
+        run: npm run build_lib --prefix ../..
       # - name: Copy npmrc to dist/anylibs
       #  run: echo "copy done"
       - name: Publish Lib to GitHub Packages
