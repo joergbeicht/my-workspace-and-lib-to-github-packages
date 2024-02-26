@@ -18,11 +18,13 @@ jobs:
         with:
           node-version: 16
       - name: Install dependencies
-        run: npm install
-      - name: change to lib
-        run: cd projects/my-library
+        run: npm ci
+      #- name: change to lib
+      #  run: cd projects/my-library
+      # - name: Build Lib
+      #  run: npm run build_lib --prefix ../..
       - name: Build Lib
-        run: npm run build_lib --prefix ../..
+        run: npm run build_lib
       # - name: Copy npmrc to dist/anylibs
       #  run: echo "copy done"
       - name: Publish Lib to GitHub Packages
